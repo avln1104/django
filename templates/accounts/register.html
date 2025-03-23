@@ -1,0 +1,11 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Ro‘yxatdan o‘tish{% endblock %}
+{% block content %}
+    <h2>Ro‘yxatdan o‘tish</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Ro‘yxatdan o‘tish</button>
+    </form>
+    <p>Allaqachon hisobingiz bormi? <a href="{% url 'login' %}">Kirish</a></p>
+{% endblock %}
